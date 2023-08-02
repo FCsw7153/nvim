@@ -3,16 +3,23 @@ return {
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig",
+	"folke/neoconf.nvim",
+        "folke/neodev.nvim",
+        {
+            "j-hui/fidget.nvim",
+            tag = "legacy",
+        },
     },
     config = function()
         local servers = {
-            lua_ls = {
-                Lua = {
-                    workspace = { checkThirdParty = false },
-                    telemetry = { enable = false },
-                },
-            },
-            pyright = {},
+        	lua_ls = {
+                	Lua = {
+			workspace = { checkThirdParty = false },
+                    	telemetry = { enable = false },
+                	},
+            	},
+           	pyright = {},
+		clangd = {},
         }
         local on_attach = function(_, bufnr)
             -- Enable completion triggered by <c-x><c-o>
@@ -43,6 +50,8 @@ return {
                 vim.lsp.buf.format { async = true }
             end, "[F]ormat code")
         end
+	require("neoconf").setup()
+        require("neodev").setup()
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = vim.tbl_keys(servers),
@@ -51,6 +60,7 @@ return {
                     require("lspconfig")[server_name].setup {
                         settings = servers[server_name],
                         on_attach = on_attach,
+                        capabilities = capabilities,
                     }
                 end,
             }

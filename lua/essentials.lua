@@ -7,6 +7,9 @@ option.clipboard = "unnamed"
 option.showmode = false
 option.wrap = false
 option.splitright = true
+option.tabstop = 4
+option.shiftwidth = 4
+option.expandtab = true
 
 --keybindings
 global.mapleader = " "
