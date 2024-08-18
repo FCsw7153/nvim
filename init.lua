@@ -1,4 +1,1 @@
-vim.loader.enable()
-require("essentials")
-require("lazynvim")
-
+vim.opt.relativenumber = true
