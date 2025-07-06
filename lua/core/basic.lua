@@ -12,3 +12,8 @@ vim.opt.shiftwidth = 0
 
 -- autoread file changes in other application
 vim.opt.autoread = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.hlsearch = false
