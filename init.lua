@@ -1,5 +1,4 @@
-require("core.options")
-require("core.keymaps")
-require("config.lazy")
-require("mini.pairs").setup()
+require("core.basic")
+require("core.keymap")
+require("core.lazy")
 
