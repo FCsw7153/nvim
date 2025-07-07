@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+    enable = not vim.g.vscode,
 	main = "nvim-treesitter.configs",
 	branch = "main",
 	config = function()

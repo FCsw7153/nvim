@@ -1,5 +1,6 @@
 return {
     "nvimdev/lspsaga.nvim",
+    enable = not vim.g.vscode,
     cmd = "Lspsaga",
     opts = {
         finder = {

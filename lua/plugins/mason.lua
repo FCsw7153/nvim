@@ -1,5 +1,6 @@
 return {
 	"mason-org/mason.nvim",
+    enable = not vim.g.vscode,
 	event = "VeryLazy",
 	dependencies = {
 		"neovim/nvim-lspconfig",

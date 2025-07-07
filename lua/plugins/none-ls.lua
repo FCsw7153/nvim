@@ -1,5 +1,6 @@
 return {
 	"nvimtools/none-ls.nvim",
+    enable = not vim.g.vscode,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"mason-org/mason.nvim",

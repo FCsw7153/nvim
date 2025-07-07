@@ -1,5 +1,6 @@
 return {
     "folke/tokyonight.nvim",
+    enable = not vim.g.vscode,
     opts = {
         style = "moon"
     },
